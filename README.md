@@ -34,7 +34,7 @@ Restart-Service SplunkForwarder
 Get-Service SplunkForwader
 ```
 
-7. Goto the **Splunk Dashboard > Apps > Search & Report** and type in the searchbar
+7. Goto the **Splunk Dashboard > Apps > Search & Reporting** and type in the searchbar
 
 ```
 index=main host="<your-hostname>" sourcetype="WinEventLog:Microsoft-Windows-Sysmon/Operational"
