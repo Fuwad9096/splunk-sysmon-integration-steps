@@ -5,14 +5,12 @@
 
 ```
 cd "C:\Program Files\SplunkUniversalForwarder\etc\system\local"
-
 ```
 
 3. Create the **inputs.conf** file there
 
 ```
 notepad inputs.conf
-
 ```
 
 4. Add the following lines in **inputs.conf**
@@ -22,28 +20,23 @@ notepad inputs.conf
 disabled = 0
 renderXml = true
 index = main
-
 ```
 
 5. Restart the forwarder
 
 ```
 Restart-Service SplunkForwarder
-
 ```
 
-6. Then verify
+6. Then verify and you should see **Running**
 
 ```
 Get-Service SplunkForwader
-
 ```
-You should see **Running**
 
 7. Goto the **Splunk Dashboard > Apps > Search & Report** and type in the searchbar
 
 ```
 index=main host="<your-hostname>" sourcetype="WinEventLog:Microsoft-Windows-Sysmon/Operational"
-
 ```
 8. You should see the sourcetype eventually
